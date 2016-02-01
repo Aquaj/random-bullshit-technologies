@@ -3,7 +3,6 @@ require 'nokogiri'
 require 'open-uri'
 
 require 'sinatra'
-require "sinatra/reloader" if development?
 
 techs = Nokogiri::HTML.parse(open("https://www.ruby-toolbox.com/categories/by_name", 'User-Agent' => 'firefox').read)
 techs = techs.css(".group_items .link").map(&:children).map(&:first).map(&:to_s).map(&:strip)
