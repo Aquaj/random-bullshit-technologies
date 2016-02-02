@@ -17,6 +17,7 @@
 }
 
 .darken {
+  z-index: 1;
   position:absolute;
   opacity: 0;
   width: 300px;
@@ -44,6 +45,7 @@
 }
 
 a {
+  margin: 0;
   text-decoration: none;
 }
 
@@ -74,13 +76,13 @@ body {
 <div class="answers">
 <% @technos.each do |techno| %>
   <div class="tech">
+    <a href="www.ruby-toolbox.com/categories/<%= techno.tr(" ", "_") %>">
     <div class="darken"></div>
     <img src="/headertech.png" style="width: 300px"/>
-    <a href="www.ruby-toolbox.com/categories/<%= techno.tr(" ", "_") %>">
     <div class="techlink">
       <div class="techtext"><h2><%= techno %></h2></div>
     </div>
-    </a>
+  </a>
   </div>
 <% end %>
 </div>
