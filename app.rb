@@ -6,7 +6,7 @@ require 'sinatra'
 #require 'sinatra/reloader'
 
 techs = Nokogiri::HTML.parse(open("https://www.ruby-toolbox.com/categories/by_name", 'User-Agent' => 'firefox').read)
-techs = techs.css(".group_items .link").map(&:children).map(&:first).map(&:to_s).map(&:strip)
+techs = techs.css(".group_items .link").map { |link| {name: link.children.first.to_s.strip, url: link["href"]} }
 
 get '/:id' do
   # "Thou shalt work with : " +

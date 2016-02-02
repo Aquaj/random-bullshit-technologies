@@ -76,11 +76,11 @@ body {
 <div class="answers">
 <% @technos.each do |techno| %>
   <div class="tech">
-    <a href="http://www.ruby-toolbox.com/categories/<%= techno.tr(" ", "_") %>" target="_blank">
+    <a href="http://www.ruby-toolbox.com<%= techno[:url] %>" target="_blank">
     <div class="darken"></div>
     <img src="/headertech.png" style="width: 300px"/>
     <div class="techlink">
-      <div class="techtext"><h2><%= techno %></h2></div>
+      <div class="techtext"><h2><%= techno[:name] %></h2></div>
     </div>
   </a>
   </div>
