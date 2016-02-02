@@ -3,21 +3,67 @@
 .answers {
   position: absolute;
   top:30%;
-  width: 100%;
-  padding: 0 150px;
-}
-
-.border {
-  position: relative;
-  display: inline-block;
+  width: 99%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tech {
-  width: 300px;
-  position: relative;
+  border-radius:0.5em;
   display: inline-block;
-  margin: 0 auto;
+  width: auto;
+  text-align: center;
+  margin: 15px auto;
 }
+
+.darken {
+  position:absolute;
+  opacity: 0;
+  width: 300px;
+  height: 300px;
+  background-color: #0A949C;
+}
+
+.darken:hover {
+    opacity: 0.2;
+}
+
+.techlink {
+  border-bottom-right-radius:0.5em;
+  border-bottom-left-radius:0.5em;
+  width: 300px;
+  height: 272px;
+  background-color: #fff;
+  overflow: auto;
+  word-wrap: break-word;
+}
+
+.techtext {
+  position: relative;
+  top: 110px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  margin: auto 0;
+  color: black;
+  font-family: ralewaythin;
+}
+
+body {
+    background-image: -webkit-linear-gradient(rgba(0,0,0, 0.6) 0%,rgba(0,0,0, 1) 100%), url("/background.png");
+    background-image:  -moz-linear-gradient(rgba(0,0,0, 0.6) 0%,rgba(0,0,0, 1) 100%), url("/background.png");
+    background-image:  -o-linear-gradient(rgba(0,0,0, 0.6) 0%,rgba(0,0,0, 1) 100%), url("/background.png");
+    background-image:  -ms-linear-gradient(rgba(0,0,0, 0.6) 0%,rgba(0,0,0, 1) 100%), url("/background.png");
+    background-image:  linear-gradient(rgba(0,0,0, 0.6) 0%,rgba(0,0,0, 1) 100%), url("/background.png");
+    background-size: 1920px auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
 
 </style>
 
@@ -26,9 +72,15 @@
   <h3>Thou shalt work with these :</h3>
 </div>
 <div class="answers">
-<div class="border"><img src="/headertech.png" style="width: 300px"/></div>
-<% @technos[1...-1].each do |techno| %>
-  <div class="tech"><img src="/headertech.png" style="width: 300px"/></div>
+<% @technos.each do |techno| %>
+  <div class="tech">
+    <div class="darken"></div>
+    <img src="/headertech.png" style="width: 300px"/>
+    <a href="www.ruby-toolbox.com/categories/<%= techno.tr(" ", "_") %>">
+    <div class="techlink">
+      <div class="techtext"><h2><%= techno %></h2></div>
+    </div>
+    </a>
+  </div>
 <% end %>
-<div class="border"><img src="/headertech.png" style="width: 300px"/></div>
 </div>
