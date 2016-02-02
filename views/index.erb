@@ -1,0 +1,66 @@
+<style>
+
+.form {
+  position: relative;
+}
+
+.wrapper {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.number {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding: 8px 10px;
+  width: 100%;
+  border: 1px solid #c4c4c4;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #565a5c;
+  line-height: normal;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding: 8px 10px;
+  width: 100%;
+  border: 1px solid #c4c4c4;
+  border-radius: 2px;
+  background-color: #0A949C;
+  color: #fff;
+  line-height: normal;
+  text-align: center;
+  box-sizing: border-box;
+  border-color: #0A949C;
+  border-bottom-color: #555A6A;
+}
+
+.search {
+  position: absolute;
+  width: 100%;
+  top:40%;
+  display: block;
+  height: 45px;
+}
+
+</style>
+
+<div class="container">
+  <h3>Need some suggestions to know what your next project should make use of?</h3><br>
+</div>
+<div class="search">
+  <form class="wrapper" method="post">
+      <input class="number" type="number" name="technumber" min="1" max=<%= @maxnum %> value="" placeholder="How many technologies do you need?">
+      <input class="button" type="submit" value="Ask and you shall receive.">
+  </form>
+</div>

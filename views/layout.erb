@@ -1,0 +1,47 @@
+<style>
+  body {
+    background-image: -webkit-linear-gradient(rgba(0,0,0, 0.4) 0%,rgba(0,0,0, 1) 100%), url("/background.png");
+    background-image:  -moz-linear-gradient(rgba(0,0,0, 0.4) 0%,rgba(0,0,0, 1) 100%), url("/background.png");
+    background-image:  -o-linear-gradient(rgba(0,0,0, 0.4) 0%,rgba(0,0,0, 1) 100%), url("/background.png");
+    background-image:  -ms-linear-gradient(rgba(0,0,0, 0.4) 0%,rgba(0,0,0, 1) 100%), url("/background.png");
+    background-image:  linear-gradient(rgba(0,0,0, 0.4) 0%,rgba(0,0,0, 1) 100%), url("/background.png");
+    background-size: 1920px auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
+  h3 {
+    color: white;
+    position: relative;
+    text-align: center;
+    text-anchor: middle;
+    text-transform: uppercase;
+    font-family: 'ralewaythin';
+    font-size: 35px;
+  }
+
+
+  @font-face {
+    font-family: 'ralewaythin';
+    src: url('/raleway/raleway_thin-webfont.eot');
+    src: url('/raleway/raleway_thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/raleway/raleway_thin-webfont.woff2') format('woff2'),
+         url('/raleway/raleway_thin-webfont.woff') format('woff'),
+         url('/raleway/raleway_thin-webfont.ttf') format('truetype'),
+         url('/raleway/raleway_thin-webfont.svg#ralewaythin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .container {
+    position: absolute;
+    width:100%;
+    top: 25%;
+    /*display: flex;
+    justify-content: space-around;
+    align-items:center*/;
+}
+</style>
+
+<%= yield %>
